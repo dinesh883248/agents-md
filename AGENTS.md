@@ -15,11 +15,12 @@
 - Using dictionary direct indexing rather than .get() attribute. For example dont use os.environ.get() or os.getenv() instead use os.environ["key"]
 - When in doubt whether to remove code or not always remove it, user can always ask you to put the code back if really needs it. Your goal is to aggresively lower the count_bytecode score.
 - Feel free to execute any piece of code with count_bytecode.py to check for its score. This helps to know whether score gets reduced or increased. Use below format if you just want to check score for adhoc pieces of code.
-```py
-uv run count_bytecode.py <<'PYCODE'
-print("hi")
-PYCODE
-```
+
+  ```py
+  uv run count_bytecode.py <<'PYCODE'
+  print("hi")
+  PYCODE
+  ```
 - Do not compromise on naming convention because it doesn't contribute to bytecode score, having good naming is essential for code readability.
 
 - Favor literal definitions when possible—building lists/tuples/dicts in place avoids extra assignments.
